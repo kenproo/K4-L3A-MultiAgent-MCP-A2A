@@ -1,0 +1,252 @@
+[
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_gkaDyKAsoITwcNNWlWz0qej_r0vD4n8f",
+    "result_hash": "sha256:bd297fadac1948a2a6132e5add7e8461dbec400f3956ea17e7d2cf47f82ddd1a",
+    "domain": "order",
+    "data": {
+      "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+      "customer_id": "customer-row-ae443cb42006",
+      "order_status": "delivered",
+      "order_purchase_timestamp": "2018-03-23T09:00:00-03:00",
+      "order_approved_at": "2018-03-23T10:00:00-03:00",
+      "order_delivered_carrier_date": "2018-03-25T09:00:00-03:00",
+      "order_delivered_customer_date": "2018-04-01T09:00:00-03:00",
+      "order_estimated_delivery_date": "2018-04-02T09:00:00-03:00"
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_tJ5W_DtRIOnwKg3IqHy08Zk67QfpDDqR",
+    "result_hash": "sha256:443953fb52ab64d4361c40cc7c47d5eff3b3a576aded5f3349991dcfd0e90728",
+    "domain": "item",
+    "data": [
+      {
+        "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+        "order_item_id": "item-ae443cb42006",
+        "product_id": "product-ae443cb42006",
+        "seller_id": "seller-ae443cb42006",
+        "shipping_limit_date": "2018-03-26T09:00:00-03:00",
+        "price": "79.00",
+        "freight_value": "10.00"
+      },
+      {
+        "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+        "order_item_id": "item-ae443cb42006",
+        "product_id": "product-ae443cb42006",
+        "seller_id": "seller-ae443cb42006",
+        "shipping_limit_date": "2018-03-03T09:00:00-03:00",
+        "price": "79.00",
+        "freight_value": "10.00"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_XXu9XDYjSp6LxLOonD9CFu5pehNf6hQN",
+    "result_hash": "sha256:72701146bfb5a096b05fe9c399a068bc3dbbb2bda3b76162503e36ff006948b1",
+    "domain": "payment",
+    "data": {
+      "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+      "payments": [
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "payment_sequential": "1",
+          "payment_type": "credit_card",
+          "payment_installments": "1",
+          "payment_value": "44.50"
+        },
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "payment_sequential": "2",
+          "payment_type": "voucher",
+          "payment_installments": "1",
+          "payment_value": "44.50"
+        },
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "payment_sequential": "1",
+          "payment_type": "credit_card",
+          "payment_installments": "1",
+          "payment_value": "52.00"
+        }
+      ],
+      "events": [
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "event_at": "2018-03-23T10:00:00-03:00",
+          "event_type": "captured",
+          "amount_brl": "44.50",
+          "status": "confirmed"
+        },
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "event_at": "2018-03-23T11:00:00-03:00",
+          "event_type": "captured",
+          "amount_brl": "44.50",
+          "status": "confirmed"
+        },
+        {
+          "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+          "event_at": "2018-02-28T10:00:00-03:00",
+          "event_type": "captured",
+          "amount_brl": "52.00",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_tLCKMsyJ9tqiLvqw3PX_e9TwS-WbDcMC",
+    "result_hash": "sha256:c659684c94fec3952410ad59f1a7ed1b3ab44bcfcb7a837ef047e3d72b74a2b0",
+    "domain": "shipment",
+    "data": {
+      "order_id": "ae443cb420061bab1f2c5e3ad279fde8",
+      "order_status": "delivered",
+      "delivered_carrier_at": "2018-03-25T09:00:00-03:00",
+      "delivered_customer_at": "2018-04-01T09:00:00-03:00",
+      "estimated_delivery_at": "2018-04-02T09:00:00-03:00",
+      "shipping_limits": [
+        {
+          "order_item_id": "item-ae443cb42006",
+          "seller_id": "seller-ae443cb42006",
+          "shipping_limit_at": "2018-03-26T09:00:00-03:00"
+        },
+        {
+          "order_item_id": "item-ae443cb42006",
+          "seller_id": "seller-ae443cb42006",
+          "shipping_limit_at": "2018-03-03T09:00:00-03:00"
+        }
+      ],
+      "events": []
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_200m12kJeqwQh-3grJdHGI7qxZfQ7iND",
+    "result_hash": "sha256:6175dfc661e31eae89debfc629494baec9041e3765b56de2c1809509742bbc23",
+    "domain": "policy",
+    "data": {
+      "currency": "BRL",
+      "policy_version": "EC_POLICY_V1",
+      "rules": {
+        "canceled_order_paid": {
+          "case_status": "action_required",
+          "recommended_action": "issue_refund",
+          "refund_brl": 79.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "platform"
+            }
+          ]
+        },
+        "duplicate_charge": {
+          "case_status": "action_required",
+          "recommended_action": "refund_duplicate_charge",
+          "refund_brl": 64.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "late_delivery_logistics": {
+          "case_status": "action_required",
+          "recommended_action": "refund_freight",
+          "refund_brl": 16.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "logistics_provider"
+            }
+          ]
+        },
+        "late_delivery_seller": {
+          "case_status": "action_required",
+          "recommended_action": "refund_freight",
+          "refund_brl": 18.0,
+          "responsible_parties": [
+            {
+              "party_id": "seller-e58fb7bfd033",
+              "party_type": "seller"
+            }
+          ]
+        },
+        "payment_mismatch": {
+          "case_status": "action_required",
+          "recommended_action": "reconcile_payment",
+          "refund_brl": 35.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "refund_failed": {
+          "case_status": "action_required",
+          "recommended_action": "retry_refund",
+          "refund_brl": 52.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "refund_pending": {
+          "case_status": "needs_investigation",
+          "recommended_action": "monitor_refund",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "unavailable_order_paid": {
+          "case_status": "action_required",
+          "recommended_action": "issue_refund",
+          "refund_brl": 89.0,
+          "responsible_parties": [
+            {
+              "party_id": "seller-0c65eb5a1415",
+              "party_type": "seller"
+            }
+          ]
+        },
+        "unsupported_claim": {
+          "case_status": "no_action",
+          "recommended_action": "document_no_action",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "customer"
+            }
+          ]
+        },
+        "valid_split_payment": {
+          "case_status": "no_action",
+          "recommended_action": "document_no_action",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "customer"
+            }
+          ]
+        }
+      }
+    },
+    "warnings": []
+  }
+]

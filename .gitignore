@@ -12,6 +12,7 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+pytest-cache-files-*/
 .ruff_cache/
 .coverage
 htmlcov/
@@ -28,6 +29,7 @@ dist/*
 !dist/.gitkeep
 *.zip
 *.log
+.local/
 
 # Editors and operating systems
 .idea/

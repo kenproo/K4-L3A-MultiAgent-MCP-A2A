@@ -16,15 +16,20 @@ class EvidenceGateway:
     def __init__(self, session: ClientSession, contracts: Contracts) -> None:
         self._session = session
         self._contracts = contracts
+        self.tools: dict[str, dict[str, Any]] = {}
 
     async def list_tools(self) -> list[str]:
-        response = await self._session.list_tools()
-        return sorted(tool.name for tool in response.tools)
+        if not self.tools:
+            response = await self._session.list_tools()
+            self.tools = {tool.name: tool.model_dump(by_alias=True) for tool in response.tools}
+        return sorted(self.tools)
 
     async def call(self, tool_name: str, *, case_id: str, **arguments: str) -> dict[str, Any]:
+        if tool_name not in await self.list_tools():
+            raise ValueError(f"Tool was not discovered: {tool_name}")
         payload = {"case_id": case_id, **arguments}
         result = await self._session.call_tool(tool_name, arguments=payload)
-        if result.isError:
+        if getattr(result, "is_error", getattr(result, "isError", False)):
             message = " ".join(
                 block.text for block in result.content if getattr(block, "text", None)
             )

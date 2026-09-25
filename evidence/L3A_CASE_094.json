@@ -1,0 +1,246 @@
+[
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_C_JyqMVxmbSUseOsFMwekcMyaR1JGMKb",
+    "result_hash": "sha256:f7f7182ec06ab3d55d4deea7241e520e26415f53c39e4b8f737c1590e0272f44",
+    "domain": "order",
+    "data": {
+      "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+      "customer_id": "customer-row-a833e4af2b4c",
+      "order_status": "delivered",
+      "order_purchase_timestamp": "2018-04-01T09:00:00-03:00",
+      "order_approved_at": "2018-04-01T10:00:00-03:00",
+      "order_delivered_carrier_date": "2018-04-03T09:00:00-03:00",
+      "order_delivered_customer_date": "2018-04-16T09:00:00-03:00",
+      "order_estimated_delivery_date": "2018-04-11T09:00:00-03:00"
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_QmpmugRShNMyv2JbmE8r3o37KVGYksoI",
+    "result_hash": "sha256:a1e585ec403bae019176d9337377653698cd3164b649e855a5e0ed3a7b451856",
+    "domain": "item",
+    "data": [
+      {
+        "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+        "order_item_id": "item-a833e4af2b4c",
+        "product_id": "product-a833e4af2b4c",
+        "seller_id": "seller-a833e4af2b4c",
+        "shipping_limit_date": "2018-04-04T09:00:00-03:00",
+        "price": "79.00",
+        "freight_value": "18.00"
+      },
+      {
+        "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+        "order_item_id": "item-a833e4af2b4c",
+        "product_id": "product-a833e4af2b4c",
+        "seller_id": "seller-a833e4af2b4c",
+        "shipping_limit_date": "2018-02-22T09:00:00-03:00",
+        "price": "79.00",
+        "freight_value": "10.00"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_o3Hfhx8fQG1iNiUZNkTr53Q-Xy_0Izo4",
+    "result_hash": "sha256:7e9045083567560b886e5678bf4f52381e89f83739737c54fb8813204107bb84",
+    "domain": "payment",
+    "data": {
+      "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+      "payments": [
+        {
+          "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+          "payment_sequential": "1",
+          "payment_type": "credit_card",
+          "payment_installments": "1",
+          "payment_value": "16.00"
+        },
+        {
+          "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+          "payment_sequential": "1",
+          "payment_type": "credit_card",
+          "payment_installments": "1",
+          "payment_value": "89.00"
+        }
+      ],
+      "events": [
+        {
+          "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+          "event_at": "2018-04-01T10:00:00-03:00",
+          "event_type": "captured",
+          "amount_brl": "16.00",
+          "status": "confirmed"
+        },
+        {
+          "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+          "event_at": "2018-02-19T10:00:00-03:00",
+          "event_type": "captured",
+          "amount_brl": "89.00",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_ppti7uFdSofCA7ywvhPthq2gZvenUVQl",
+    "result_hash": "sha256:0d70a6e539f11f68f152d2d6797e672e6693fa8f34ba92e2e9b3e92dfe657ba9",
+    "domain": "shipment",
+    "data": {
+      "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+      "order_status": "delivered",
+      "delivered_carrier_at": "2018-04-03T09:00:00-03:00",
+      "delivered_customer_at": "2018-04-16T09:00:00-03:00",
+      "estimated_delivery_at": "2018-04-11T09:00:00-03:00",
+      "shipping_limits": [
+        {
+          "order_item_id": "item-a833e4af2b4c",
+          "seller_id": "seller-a833e4af2b4c",
+          "shipping_limit_at": "2018-04-04T09:00:00-03:00"
+        },
+        {
+          "order_item_id": "item-a833e4af2b4c",
+          "seller_id": "seller-a833e4af2b4c",
+          "shipping_limit_at": "2018-02-22T09:00:00-03:00"
+        }
+      ],
+      "events": [
+        {
+          "order_id": "a833e4af2b4c893929b9f3adce3ecbeb",
+          "event_at": "2018-04-16T09:00:00-03:00",
+          "event_type": "delivered_late",
+          "actor": "logistics_provider",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "warnings": []
+  },
+  {
+    "schema_version": "day09-mcp-evidence-v1",
+    "evidence_ref": "ev_ooDkL6a0H9xDpyrsVX4lHuUjaMNX7fm8",
+    "result_hash": "sha256:6175dfc661e31eae89debfc629494baec9041e3765b56de2c1809509742bbc23",
+    "domain": "policy",
+    "data": {
+      "currency": "BRL",
+      "policy_version": "EC_POLICY_V1",
+      "rules": {
+        "canceled_order_paid": {
+          "case_status": "action_required",
+          "recommended_action": "issue_refund",
+          "refund_brl": 79.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "platform"
+            }
+          ]
+        },
+        "duplicate_charge": {
+          "case_status": "action_required",
+          "recommended_action": "refund_duplicate_charge",
+          "refund_brl": 64.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "late_delivery_logistics": {
+          "case_status": "action_required",
+          "recommended_action": "refund_freight",
+          "refund_brl": 16.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "logistics_provider"
+            }
+          ]
+        },
+        "late_delivery_seller": {
+          "case_status": "action_required",
+          "recommended_action": "refund_freight",
+          "refund_brl": 18.0,
+          "responsible_parties": [
+            {
+              "party_id": "seller-e58fb7bfd033",
+              "party_type": "seller"
+            }
+          ]
+        },
+        "payment_mismatch": {
+          "case_status": "action_required",
+          "recommended_action": "reconcile_payment",
+          "refund_brl": 35.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "refund_failed": {
+          "case_status": "action_required",
+          "recommended_action": "retry_refund",
+          "refund_brl": 52.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "refund_pending": {
+          "case_status": "needs_investigation",
+          "recommended_action": "monitor_refund",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "payment_provider"
+            }
+          ]
+        },
+        "unavailable_order_paid": {
+          "case_status": "action_required",
+          "recommended_action": "issue_refund",
+          "refund_brl": 89.0,
+          "responsible_parties": [
+            {
+              "party_id": "seller-0c65eb5a1415",
+              "party_type": "seller"
+            }
+          ]
+        },
+        "unsupported_claim": {
+          "case_status": "no_action",
+          "recommended_action": "document_no_action",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "customer"
+            }
+          ]
+        },
+        "valid_split_payment": {
+          "case_status": "no_action",
+          "recommended_action": "document_no_action",
+          "refund_brl": 0.0,
+          "responsible_parties": [
+            {
+              "party_id": null,
+              "party_type": "customer"
+            }
+          ]
+        }
+      }
+    },
+    "warnings": []
+  }
+]
